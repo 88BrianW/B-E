@@ -7,8 +7,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
-    --color-sky-300: oklch(0.828 0.111 230.318);
-    --color-slate-400: oklch(0.704 0.04 256.788);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
@@ -24,6 +22,7 @@
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -366,26 +365,11 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
-  }
-  .mt-32 {
-    margin-top: calc(var(--spacing) * 32);
-  }
-  .mt-40 {
-    margin-top: calc(var(--spacing) * 40);
-  }
-  .mt-48 {
-    margin-top: calc(var(--spacing) * 48);
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
   }
   .box-border {
     box-sizing: border-box;
@@ -477,14 +461,11 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
-  }
   .h-\[75vh\] {
     height: 75vh;
+  }
+  .h-\[98vh\] {
+    height: 98vh;
   }
   .h-screen {
     height: 100vh;
@@ -498,17 +479,11 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
-  }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -516,35 +491,14 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-18 {
-    width: calc(var(--spacing) * 18);
-  }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
-  }
-  .w-88 {
-    width: calc(var(--spacing) * 88);
-  }
-  .w-\[5vw\] {
-    width: 5vw;
-  }
-  .w-\[8vw\] {
-    width: 8vw;
-  }
-  .w-\[10vw\] {
-    width: 10vw;
-  }
-  .w-\[30vw\] {
-    width: 30vw;
-  }
-  .w-\[40vw\] {
-    width: 40vw;
-  }
   .w-\[75w\] {
     width: 75w;
   }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-12 {
+    max-width: calc(var(--spacing) * 12);
   }
   .max-w-none {
     max-width: none;
@@ -932,8 +886,8 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
@@ -1028,6 +982,9 @@
   }
   .rounded {
     border-radius: 0.25rem;
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -1150,12 +1107,6 @@
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
-  .bg-\[\#4D7CAE\] {
-    background-color: #4D7CAE;
-  }
-  .bg-\[\#7EA2C9\] {
-    background-color: #7EA2C9;
-  }
   .bg-\[\#083D77\] {
     background-color: #083D77;
   }
@@ -1168,17 +1119,11 @@
   .bg-\[\#BACEE4\] {
     background-color: #BACEE4;
   }
-  .bg-\[\#DBE6F1\] {
-    background-color: #DBE6F1;
-  }
   .bg-\[\#EBEBD3\] {
     background-color: #EBEBD3;
   }
   .bg-\[\#F4D35E\] {
     background-color: #F4D35E;
-  }
-  .bg-\[\#F7F7ED\] {
-    background-color: #F7F7ED;
   }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
@@ -1194,12 +1139,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-sky-300 {
-    background-color: var(--color-sky-300);
-  }
-  .bg-slate-400 {
-    background-color: var(--color-slate-400);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1385,9 +1324,6 @@
   .p-9 {
     padding: calc(var(--spacing) * 9);
   }
-  .p-16 {
-    padding: calc(var(--spacing) * 16);
-  }
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
@@ -1552,9 +1488,6 @@
   }
   .text-\[\#F7F7ED\] {
     color: #F7F7ED;
-  }
-  .text-\[\#FBFBF6\] {
-    color: #FBFBF6;
   }
   .text-white {
     color: var(--color-white);
