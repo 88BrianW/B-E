@@ -7,6 +7,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-amber-300: oklch(0.879 0.169 91.605);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
@@ -362,6 +363,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
@@ -479,6 +483,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -499,6 +506,9 @@
   }
   .max-w-12 {
     max-width: calc(var(--spacing) * 12);
+  }
+  .max-w-\[75vw\] {
+    max-width: 75vw;
   }
   .max-w-none {
     max-width: none;
@@ -1130,6 +1140,9 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1938,6 +1951,11 @@
       @media (hover: hover) {
         cursor: pointer;
       }
+    }
+  }
+  .lg\:mt-8 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 8);
     }
   }
   .lg\:mt-20 {
