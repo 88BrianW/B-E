@@ -55,6 +55,9 @@ const openMobileNav = document.getElementById("Mobile-nav");
 const closeMobileNav = document.getElementById("Mobile-close");
 const header = document.getElementById("header")
 
+const studentButton = document.getElementById("StudentButton")
+const parentButton = document.getElementById("ParentButton")
+
 navOpen.addEventListener("click", ()=>{
     console.log("clicked")
     defaultMobileNav.classList.add("hidden") 
